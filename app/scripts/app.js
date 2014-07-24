@@ -15,9 +15,12 @@ var app = angular.module('angNewsApp', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'firebase'
   ])
-  app.config(function ($routeProvider) {
+  .constant('FIREBASE_URL', 'https://fiery-fire-4912.firebaseio.com/');
+
+app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/posts.html',
